@@ -16,6 +16,8 @@ class ProgressBar
       attr_accessor             :finished
 
       def initialize(options = {})
+        super() if defined?(super)
+
         self.total           = options.fetch(:total, DEFAULT_TOTAL)
         self.smoothing       = options[:smoothing] || DEFAULT_SMOOTHING
         self.autofinish      = options.fetch(:autofinish, true)

@@ -6,6 +6,8 @@ class ProgressBar
       TIME_FORMAT = '%02d:%02d:%02d'
 
       def initialize
+        super() if defined?(super)
+
         @started_at = nil
         @stopped_at = nil
       end
